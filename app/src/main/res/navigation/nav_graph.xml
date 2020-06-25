@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchResultFragment">
+
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.app.nearby_me.fragment.PlaceSearchFragment"
+        android:label="SearchResultFragment">
+
+        <action
+            android:id="@+id/action_searchResultFragment_to_searchAllFragment"
+            app:destination="@id/searchAllFragment" />
+        <action
+            android:id="@+id/action_searchResultFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/placeDetailsFragment"
+        android:name="com.app.nearby_me.fragment.PlaceDetailsFragment"
+        android:label="PlaceDetailsFragment">
+        <action
+            android:id="@+id/action_placeDetailsFragment_to_searchAllFragment"
+            app:destination="@id/searchAllFragment" />
+        <action
+            android:id="@+id/action_placeDetailsFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+        <argument
+            android:name="uid"
+            android:defaultValue="12345678"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchAllFragment"
+        android:name="com.app.nearby_me.fragment.SearchAllFragment"
+        android:label="SearchAllFragment">
+        <action
+            android:id="@+id/action_searchAllFragment_to_placeDetailsFragment"
+            app:destination="@id/placeDetailsFragment" />
+    </fragment>
+</navigation>

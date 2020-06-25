@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Nearby-me</string>
+    <string name="please_enter_the_search_text_here">Please enter the search text here...</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="contact_number">Contact Number: %1s</string>
+    <string name="address">Address: %1s</string>
+    <string name="twitter">Twitter: %1s</string>
+    <string name="no_data">No result available for search venue.</string>
+    <string name="error_occured">Some error occurred ,please try again later.</string>
+    <string name="no_venue_available">No Venues are available.</string>
+    <string name="all_venues">All Venues</string>
+</resources>

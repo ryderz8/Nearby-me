@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dto"
+            type="com.app.nearby_me.model.pojo.PlaceDTO" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{dto.categoryName}"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ivFav"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="The Category of Place" />
+
+        <ImageView
+            android:id="@+id/ivFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_star"
+            android:backgroundTint="@color/colorBlue"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTipCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableBottom="@drawable/ic_tip"
+            android:gravity="center"
+            android:text="@{dto.statsDTO.tipCount}"
+            app:layout_constraintEnd_toStartOf="@+id/tvUserCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="140" />
+
+        <TextView
+            android:id="@+id/tvUserCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/ic_user"
+            android:gravity="center"
+            android:text="@{dto.statsDTO.userCount}"
+            app:layout_constraintEnd_toStartOf="@+id/tvCheckInCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvTipCount"
+            app:layout_constraintTop_toTopOf="@+id/tvTipCount"
+            tools:text="110" />
+
+        <TextView
+            android:id="@+id/tvCheckInCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/ic_checkin"
+            android:gravity="center"
+            android:text="@{dto.statsDTO.checkInCount}"
+            app:layout_constraintEnd_toStartOf="@+id/tvVisitCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvUserCount"
+            app:layout_constraintTop_toTopOf="@+id/tvUserCount"
+            tools:text="4" />
+
+        <TextView
+            android:id="@+id/tvVisitCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/ic_visit"
+            android:gravity="center"
+            android:text="@{dto.statsDTO.visitCount}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvCheckInCount"
+            app:layout_constraintTop_toTopOf="@+id/tvCheckInCount"
+            tools:text="240" />
+
+        <TextView
+            android:id="@+id/tvContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_local_phone"
+            android:drawablePadding="4dp"
+            android:text="@{@string/contact_number(dto.phoneNumber)}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipCount"
+            tools:text="Contact Number:987654321" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_address"
+            android:drawablePadding="4dp"
+            android:text="@{@string/address(dto.address)}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContact"
+            tools:text="Address:The address of the place" />
+
+        <TextView
+            android:id="@+id/tvTwitter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_social"
+            android:drawablePadding="4dp"
+            android:text="@{@string/twitter(dto.twitter)}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+            tools:text="Twitter:TwitterName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
