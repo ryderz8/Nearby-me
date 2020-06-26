@@ -16,7 +16,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyA7j9adG9qTML49VUJnyRUkHx88uUXyfAw" />
 
         <activity
             android:name="com.app.nearby_me.activity.SearchedPlaceActivity"

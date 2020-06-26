@@ -7,16 +7,17 @@ buildscript {
         glideVersion = '4.10.0'
         googleMapVersion = '17.0.0'
         gsonVersion = '2.8.6'
-        kotlinVersion = '1.3.61'
+        kotlinVersion = '1.3.72'
         lifecycleVersion = '2.1.0'
         navVersion = '2.1.0'
-        okHttpVersion = '4.3.0'
-        retrofitGsonConvertVersion = '2.6.1'
-        retrofitVersion = '2.7.0'
+        okHttpVersion = '4.7.2'
+        retrofitGsonConvertVersion = '2.9.0'
+        retrofitVersion = '2.9.0'
     }
     repositories {
         google()
         jcenter()
+        mavenCentral()
 
     }
     dependencies {

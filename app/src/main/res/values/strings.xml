@@ -9,4 +9,5 @@
     <string name="error_occured">Some error occurred ,please try again later.</string>
     <string name="no_venue_available">No Venues are available.</string>
     <string name="all_venues">All Venues</string>
+    <string name="mapbox_token">pk.eyJ1IjoicnlkZXJ6OCIsImEiOiJja2J1bjVoeGYwNzA1MzRwZ2p3aG53N3ZxIn0.X0I3jgZmDKOnDcq-prbT2Q</string>
 </resources>
